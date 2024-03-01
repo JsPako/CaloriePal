@@ -1,13 +1,13 @@
-package com.jspako.caloriepal.ui.dashboard
+package com.jspako.caloriepal.ui.nutrition
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class NutritionViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "Nutrition Page"
     }
     val text: LiveData<String> = _text
 }
