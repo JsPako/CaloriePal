@@ -20,7 +20,7 @@
 
     <style name="Theme.CaloriePal.Button">
         <!-- Define your dark theme attributes -->
-        <item name="android:backgroundTint">@color/creme</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:backgroundTint">@color/light_gray</item>
+        <item name="android:textColor">@color/creme</item>
     </style>
 </resources>
