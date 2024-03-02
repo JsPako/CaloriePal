@@ -16,11 +16,10 @@
         <item name="android:windowBackground">?attr/colorPrimary</item>
         <item name="cardBackgroundColor">?attr/colorSecondary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:listDivider">@color/light_gray</item>
     </style>
 
-    <style name="Theme.CaloriePal.Button">
-        <!-- Define your dark theme attributes -->
-        <item name="android:backgroundTint">@color/light_gray</item>
-        <item name="android:textColor">@color/creme</item>
+    <style name="Theme.CaloriePal.Profile">
+        <item name="android:textColor">@color/gold</item>
     </style>
 </resources>

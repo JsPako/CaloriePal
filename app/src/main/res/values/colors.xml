@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="creme">#E2D6C8</color>
+    <color name="off_creme">#d2c9be</color>
     <color name="gold">#C49448</color>
     <color name="gray">#202427</color>
     <color name="light_gray">#35383B</color>

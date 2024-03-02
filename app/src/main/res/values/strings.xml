@@ -1,7 +1,20 @@
 <resources>
-    <string name="app_name">CaloriePal</string>
+    <string name="app_name" translatable="false">CaloriePal</string>
     <string name="title_home">Home</string>
     <string name="title_nutrition">Nutrition</string>
     <string name="title_workouts">Workouts</string>
     <string name="title_profile">Me</string>
+    <string name="profile_section">Profile</string>
+    <string name="goals_section">Nutrition Goals</string>
+    <string name="reminder_section">Food Reminders</string>
+    <string name="profile_name">\tName</string>
+    <string name="profile_height">\tHeight</string>
+    <string name="profile_weight">\tCurrent Weight</string>
+    <string name="profile_goal_weight">\tGoal Weight</string>
+    <string name="profile_age">\tAge</string>
+    <string name="profile_daily_calories">\tDaily Calories</string>
+    <string name="profile_daily_protein">\tDaily Protein</string>
+    <string name="profile_daily_fats">\tDaily Fats</string>
+    <string name="profile_protein">\tProtein</string>
+    <string name="profile_creatine">\tCreatine</string>
 </resources>
