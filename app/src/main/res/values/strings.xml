@@ -17,4 +17,7 @@
     <string name="profile_daily_fats">\tDaily Fats</string>
     <string name="profile_protein">\tProtein</string>
     <string name="profile_creatine">\tCreatine</string>
+    <string name="activity_level">\tActivity Level</string>
+    <string name="cancel">Cancel</string>
+    <string name="set">Set</string>
 </resources>

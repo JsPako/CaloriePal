@@ -22,4 +22,17 @@
     <style name="Theme.CaloriePal.Profile">
         <item name="android:textColor">@color/gold</item>
     </style>
+
+    <style name="Theme.CaloriePal.ProfileValue">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Theme.CaloriePal.Dialog">
+        <item name="cardBackgroundColor">@color/off_creme</item>
+        <item name="popupMenuBackground">@color/off_creme</item>
+    </style>
+
+    <style name="Theme.CaloriePal.DialogInput">
+        <item name="android:editTextColor">@color/blue</item>
+    </style>
 </resources>

@@ -5,6 +5,8 @@
     <color name="gold">#C49448</color>
     <color name="gray">#202427</color>
     <color name="light_gray">#35383B</color>
+    <color name="blue">#0066CC</color>
+    <color name="light_blue">#66B2FF</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 </resources>

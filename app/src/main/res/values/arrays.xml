@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activityItems">
+        <item>Low Activity</item>
+        <item>Moderate Activity</item>
+        <item>High Activity</item>
+    </string-array>
+</resources>

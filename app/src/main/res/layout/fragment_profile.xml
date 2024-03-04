@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.profile.ProfileFragment"
+    tools:ignore="ButtonStyle" >
 
     <TextView
         android:id="@+id/text_profile"
@@ -16,9 +17,10 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal|center_vertical"
-        android:text=""
+        android:letterSpacing="0.05"
         android:textAlignment="gravity"
         android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/settings_btn"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,350 +50,494 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="72dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_marginBottom="72dp">
 
-        <TextView
-            android:id="@+id/profile_section"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/profile_section"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:theme="@style/Theme.CaloriePal.Profile"
-            app:layout_constraintBottom_toTopOf="@+id/name_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:id="@+id/divider2"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/name_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_section" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/name_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_name_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_name"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/height_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_section" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/height_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_btn" />
+                <TextView
+                    android:id="@+id/profile_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="68dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:alpha="0.9"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.03"
+                    android:text="@string/profile_section"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:theme="@style/Theme.CaloriePal.Profile" />
 
-        <Button
-            android:id="@+id/height_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_height_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_height"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/weight_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_btn" />
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider4"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/weight_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/height_btn" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/weight_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_weight_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_weight"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/goal_weight_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/height_btn" />
+                    <Button
+                        android:id="@+id/name_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_name_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_name"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp"/>
 
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/goal_weight_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weight_btn" />
+                    <Button
+                        android:id="@+id/name_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/goal_weight_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_goal_weight_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_goal_weight"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/age_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weight_btn" />
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider6"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@+id/goal_weight_btn" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/age_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_age_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_age"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goal_weight_btn" />
+                    <Button
+                        android:id="@+id/age_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_age_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_age"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
 
-        <View
-            android:id="@+id/divider8"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@+id/age_btn"
-            tools:layout_editor_absoluteX="0dp" />
+                    <Button
+                        android:id="@+id/age_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
 
-        <TextView
-            android:id="@+id/goals_section"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/goals_section"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:theme="@style/Theme.CaloriePal.Profile"
-            app:layout_constraintBottom_toTopOf="@+id/calorie_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider8" />
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider7"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/calorie_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goals_section" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/calorie_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_calorie_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_daily_calories"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/protein_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goals_section" />
+                    <Button
+                        android:id="@+id/height_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_height_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_height"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp"/>
 
-        <View
-            android:id="@+id/divider9"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/protein_btn"
-            app:layout_constraintTop_toBottomOf="@+id/calorie_btn" />
+                    <Button
+                        android:id="@+id/height_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/protein_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_protein_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_daily_protein"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/fats_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calorie_btn" />
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider10"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/fats_btn"
-            app:layout_constraintTop_toBottomOf="@+id/protein_btn" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/fats_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_fat_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_daily_fats"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/protein_btn" />
+                    <Button
+                        android:id="@+id/weight_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_weight_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_weight"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
 
-        <View
-            android:id="@+id/divider11"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@+id/fats_btn"
-            tools:layout_editor_absoluteX="0dp" />
+                    <Button
+                        android:id="@+id/weight_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
 
-        <TextView
-            android:id="@+id/reminder_section"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/reminder_section"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:theme="@style/Theme.CaloriePal.Profile"
-            app:layout_constraintBottom_toTopOf="@+id/reminder_protein_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider11" />
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider12"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/reminder_protein_btn"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_section" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/reminder_protein_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_protein_reminder_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_protein"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/reminder_creatine_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_section" />
+                    <Button
+                        android:id="@+id/goal_weight_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_goal_weight_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_goal_weight"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
 
-        <View
-            android:id="@+id/divider13"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/reminder_creatine_btn"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_protein_btn" />
+                    <Button
+                        android:id="@+id/goal_weight_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/reminder_creatine_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="#00FFFFFF"
-            android:drawableStart="@drawable/profile_creatine_reminder_icon"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile_creatine"
-            android:textAlignment="viewStart"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_protein_btn" />
+                <View
+                    android:id="@+id/divider8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider14"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_creatine_btn"
-            tools:layout_editor_absoluteX="0dp" />
+                <TextView
+                    android:id="@+id/goals_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:alpha="0.9"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.03"
+                    android:text="@string/goals_section"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:theme="@style/Theme.CaloriePal.Profile" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/activity_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_activity_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/activity_level"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/activity_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/calorie_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_calorie_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_daily_calories"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/calorie_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/protein_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_protein_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_daily_protein"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/protein_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/fats_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_fat_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_daily_fats"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/fats_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/reminder_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:alpha="0.9"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.03"
+                    android:text="@string/reminder_section"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:theme="@style/Theme.CaloriePal.Profile" />
+
+                <View
+                    android:id="@+id/divider12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/reminder_protein_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_protein_reminder_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_protein"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/reminder_protein_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider13"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/reminder_creatine_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:background="#00FFFFFF"
+                        android:drawableStart="@drawable/profile_creatine_reminder_icon"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/profile_creatine"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/reminder_creatine_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text=""
+                        android:textAlignment="viewEnd"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.CaloriePal.ProfileValue" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider14"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
